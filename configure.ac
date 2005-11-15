@@ -32,6 +32,13 @@ AC_PATH_PROG(MKFONTSCALE, mkfontscale)
 AC_PATH_PROG(MKFONTDIR, mkfontdir)
 AC_PATH_PROG(FCCACHE, fc-cache)
 
+DEFAULT_FONTDIR=${libdir}/X11/fonts/Type1
+AC_ARG_WITH(fontdir,
+	AS_HELP_STRING([--with-fontdir=FONTDIR], [Path to install fonts]),
+	[FONTDIR="$withval"],
+	[FONTDIR="$DEFAULT_FONTDIR"])
+AC_SUBST(FONTDIR)
+
 XORG_RELEASE_VERSION
 
 AC_OUTPUT([Makefile])

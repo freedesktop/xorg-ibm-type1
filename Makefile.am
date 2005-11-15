@@ -19,7 +19,6 @@
 #  NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 #  CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-FONT_DIR = Type1
 FONT_FILES = \
 	cour.afm \
 	courb.afm \
@@ -30,7 +29,7 @@ FONT_FILES = \
 	couri.pfa \
 	cour.pfa
 
-fontdir = $(libdir)/X11/fonts/$(FONT_DIR)
+fontdir = @FONTDIR@
 font_DATA = $(FONT_FILES)
 
 EXTRA_DIST = $(FONT_FILES) COPYRIGHT.IBM autogen.sh
