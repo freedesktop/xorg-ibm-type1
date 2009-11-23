@@ -34,6 +34,8 @@ font_DATA = $(FONT_FILES)
 
 EXTRA_DIST = $(FONT_FILES) COPYRIGHT.IBM
 
+MAINTAINERCLEANFILES = ChangeLog INSTALL
+
 install-data-hook:
 	@rm -f $(DESTDIR)$(fontdir)/fonts.scale
 	$(MKFONTSCALE) $(DESTDIR)$(fontdir)
